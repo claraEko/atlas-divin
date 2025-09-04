@@ -5,10 +5,82 @@
     <title>eikon parcel starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="scss/main.scss" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
-    <h1>Hello world</h1>
-
+    <!-- <h1 class="text-3xl font-bold underline">Hello world!</h1>  ex for tailwindcss -->
+    <!-- revoir tout css -->
+    <header class="grid grid-cols-2 bg-[#BCBFC3]">
+      <a href="">ATLAS DIVIN</a>
+      <nav class="grid grid-cols-2">
+        <ul class="grid grid-cols-3 gap-5">
+          <li>Mes favoris</li>
+          <li>Dieu du jour</li>
+          <li>Dieux populaires</li>
+        </ul>
+        <button><img src="img/icon/tabler-icons/moon.svg" alt="" /></button>
+      </nav>
+    </header>
+    <main>
+      <h1>Voir les dieux des panthéons</h1>
+      <section>
+        <p>Dieu du jour</p>
+        <h2>Bacchus</h2>
+        <p>
+          Egalement Dieu de l'ivresse, des débordements, de la nature et des
+          festivités.
+        </p>
+        <p>
+          Bacchus est un dieu romain correspondant à Dionysos dans la mythologie
+          grecque. Les Romains utilisaient Bacchus comme un autre nom de Liber
+          Pater, un dieu latin de la fécondité.
+        </p>
+        <a href="">En savoir plus</a>
+      </section>
+      <section class="grid grid-cols-2 gap-5">
+        <article>
+          <p>Panthéons populaires</p>
+          <ul class="grid gap-5">
+            <li>
+              <a class="grid grid-cols-2 bg-[#279EF8]" href="">
+                <p>Panthéon Grec</p>
+                <img
+                  src="img/icon/tabler-icons/arrow-narrow-right.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a class="grid grid-cols-2 bg-[#F8AF27]" href="">
+                <p>Panthéon égyptien</p>
+                <img
+                  src="img/icon/tabler-icons/arrow-narrow-right.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a class="grid grid-cols-2 bg-[#12965D]" href="">
+                <p>Panthéon nordique</p>
+                <img src="img/icon/tabler-icons/arrow-narrow-right.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a class="grid grid-cols-2 bg-[#F82727]" href="">
+                <p>Panthéon romain</p>
+                <img src="img/icon/tabler-icons/arrow-narrow-right.svg" alt=""
+              /></a>
+            </li>
+          </ul>
+        </article>
+        <section>
+          <!-- card made by post html -->
+          <!-- V test V -->
+          <div class="h-100 bg-blue-500">tet</div>
+        </section>
+      </section>
+    </main>
+    <footer></footer>
     <script src="js/main.js" type="module"></script>
   </body>
 </html>
