@@ -1,0 +1,15 @@
+.card {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 8px;
+  border: 2px solid var(--Blue, #279ef8);
+  background: var(--Background, #fff);
+}
+.card-save {
+  position: absolute;
+}
+
+.card-img {
+}
