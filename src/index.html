@@ -5,7 +5,6 @@
     <title>eikon parcel starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="scss/main.scss" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,12 +13,10 @@
     />
   </head>
   <body>
-    <!-- <h1 class="text-3xl font-bold underline">Hello world!</h1>  ex for tailwindcss -->
-    <!-- revoir tout css -->
-    <header class="grid grid-cols-2 bg-[#BCBFC3]">
+    <header>
       <a href="">ATLAS DIVIN</a>
-      <nav class="grid grid-cols-2">
-        <ul class="grid grid-cols-3 gap-5">
+      <nav>
+        <ul>
           <li>Mes favoris</li>
           <li>Dieu du jour</li>
           <li>Dieux populaires</li>
@@ -43,51 +40,85 @@
         </p>
         <a href="">En savoir plus</a>
       </section>
-      <section class="grid grid-cols-2 gap-5">
+      <section>
         <article>
           <p>Panthéons populaires</p>
-          <ul class="grid gap-5">
+          <ul>
             <li>
-              <a class="grid grid-cols-2 bg-[#279EF8]" href="">
+              <button>
                 <p>Panthéon Grec</p>
                 <img
                   src="img/icon/tabler-icons/arrow-narrow-right.svg"
                   alt=""
                 />
-              </a>
+              </button>
             </li>
             <li>
-              <a class="grid grid-cols-2 bg-[#F8AF27]" href="">
+              <button>
                 <p>Panthéon égyptien</p>
                 <img
                   src="img/icon/tabler-icons/arrow-narrow-right.svg"
                   alt=""
                 />
-              </a>
+              </button>
             </li>
             <li>
-              <a class="grid grid-cols-2 bg-[#12965D]" href="">
+              <button>
                 <p>Panthéon nordique</p>
-                <img src="img/icon/tabler-icons/arrow-narrow-right.svg" alt=""
-              /></a>
+                <img
+                  src="img/icon/tabler-icons/arrow-narrow-right.svg"
+                  alt=""
+                />
+              </button>
             </li>
             <li>
-              <a class="grid grid-cols-2 bg-[#F82727]" href="">
+              <button>
                 <p>Panthéon romain</p>
-                <img src="img/icon/tabler-icons/arrow-narrow-right.svg" alt=""
-              /></a>
+                <img
+                  src="img/icon/tabler-icons/arrow-narrow-right.svg"
+                  alt=""
+                />
+              </button>
             </li>
           </ul>
         </article>
         <section>
-          <!-- card made by post html -->
           <extends src="card.html"></extends>
-          <!-- V test V -->
-          <!-- <div class="h-100 bg-blue-500">tet</div> -->
         </section>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <nav>
+        <ul>
+          <li>Mes favoris</li>
+          <li>Dieu du jour</li>
+          <li>Dieux populaires</li>
+          <li>Politique de confidentialité</li>
+        </ul>
+        <ul>
+          <li>
+            <img
+              src="img/icon/icon/jam-icons/outline & logos/youtube.svg"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="img/icon/icon/jam-icons/outline & logos/facebook.svg"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="img/icon/icon/jam-icons/outline & logos/instagram.svg"
+              alt=""
+            />
+          </li>
+        </ul>
+      </nav>
+      <hr />
+      <p>Atlas Divin @ 2025. Tous droits réservés</p>
+    </footer>
     <script src="js/main.js" type="module"></script>
   </body>
 </html>
