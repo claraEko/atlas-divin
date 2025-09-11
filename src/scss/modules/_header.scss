@@ -4,10 +4,21 @@
   font-weight: 400;
 }
 .header-nav {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 32px;
 }
+@media (min-width: 1024px) {
+  .header-nav {
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  .burger-menu {
+    display: none;
+  }
+}
+
 .header-nav-categories {
   display: flex;
   align-items: center;
