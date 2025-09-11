@@ -1,3 +1,19 @@
+:root {
+  --blue: #279ef8;
+  --light-blue: #a3d7ff;
+  --yellow: #f8af27;
+  --light-yellow: #f7f43e;
+  --green: #12965d;
+  --light-green: #76e5b5;
+  --red: #f82727;
+  --light-red: #f8a7a7;
+
+  --text-white: #f7f6f6;
+  --grey: #696a6c;
+  --light-grey: #bcbfc3;
+  --dark-grey: #515050;
+  --black: #000000;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,4 +31,12 @@ li {
 img,
 video {
   display: block;
+}
+header {
+  display: flex;
+  padding: 20px 80px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  background: #bcbfc3;
 }
