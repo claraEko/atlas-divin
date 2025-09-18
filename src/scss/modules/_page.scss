@@ -4,6 +4,7 @@ h1 {
   font-size: 40px;
   font-weight: 400;
   margin-top: 40px;
+
   margin-left: 402px;
   margin-right: 80px;
 }
@@ -11,6 +12,7 @@ h1 {
   h1 {
     margin-right: 12px;
     margin-left: 12px;
+    margin-top: 128px;
   }
 }
 .page-card {
@@ -19,7 +21,7 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
   border-radius: 8px;
-  border: 2px solid #515050;
+  border: 2px solid var(--dark-grey);
   margin-left: 402px;
   margin-right: 80px;
   margin-top: 64px;

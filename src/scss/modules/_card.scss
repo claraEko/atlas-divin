@@ -5,8 +5,9 @@
   align-items: center;
   align-items: flex-start;
   border-radius: 8px;
-  border: 2px solid#279ef8;
+  border: 2px solid var(--blue);
   width: calc((100% - 20px) / 2);
+  background-color: var(--white);
 }
 @media (min-width: 1024px) {
   .card {
@@ -41,7 +42,7 @@
   font-size: 20px;
   font-weight: 400;
   padding: 8px 12px;
-  background-color: #fff;
+  background-color: var(--white);
   position: absolute;
   left: 0;
   bottom: 0;
@@ -64,7 +65,7 @@
   align-items: start;
   gap: 10px;
   align-self: stretch;
-  color: var(--darck-grey);
+  color: var(--dark-grey);
   font-family: "Bubbler One";
   font-size: 16px;
   font-weight: 400;
