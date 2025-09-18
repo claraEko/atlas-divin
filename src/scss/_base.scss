@@ -27,7 +27,9 @@ li {
   text-decoration: none;
   list-style: none;
 }
-
+.pantheon-nav-buttons li {
+  width: 100%;
+}
 img,
 video {
   display: block;
@@ -39,4 +41,13 @@ header {
   align-items: center;
   align-self: stretch;
   background: #bcbfc3;
+}
+@media (max-width: 1024px) {
+  header {
+    padding: 20px 12px;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    top: 0px;
+  }
 }
