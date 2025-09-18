@@ -10,7 +10,7 @@
   }
 }
 .pantheon-nav-title {
-  color: var(--Text-main, #515050);
+  color: var(--dark-grey);
   font-family: "Bubbler One";
   font-size: 24px;
   font-weight: 400;
@@ -31,8 +31,8 @@
   min-width: 305px;
   width: 100%;
   border-radius: 8px;
-  background: #279ef8;
-  color: #fff;
+  background: var(--blue);
+  color: var(--white);
   font-family: "Caesar Dressing";
   font-size: 20px;
   font-weight: 400;
@@ -46,8 +46,8 @@
   min-width: 305px;
   width: 100%;
   border-radius: 8px;
-  background: #f8af27;
-  color: #fff;
+  background: var(--yellow);
+  color: var(--white);
   font-family: "Caesar Dressing";
   font-size: 20px;
   font-weight: 400;
@@ -61,8 +61,8 @@
   min-width: 305px;
   width: 100%;
   border-radius: 8px;
-  background: #12965d;
-  color: #fff;
+  background: var(--green);
+  color: var(--white);
   font-family: "Caesar Dressing";
   font-size: 20px;
   font-weight: 400;
@@ -76,8 +76,8 @@
   min-width: 305px;
   width: 100%;
   border-radius: 8px;
-  background: #f82727;
-  color: #fff;
+  background: var(--red);
+  color: var(--white);
   font-family: "Caesar Dressing";
   font-size: 20px;
   font-weight: 400;

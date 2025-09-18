@@ -8,7 +8,8 @@
   --red: #f82727;
   --light-red: #f8a7a7;
 
-  --text-white: #f7f6f6;
+  --white: #ffff;
+  --white-dark: #f7f6f6;
   --grey: #696a6c;
   --light-grey: #bcbfc3;
   --dark-grey: #515050;
@@ -40,7 +41,7 @@ header {
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
-  background: #bcbfc3;
+  background: var(--light-grey);
 }
 @media (max-width: 1024px) {
   header {

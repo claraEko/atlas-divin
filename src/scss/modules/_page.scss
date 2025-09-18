@@ -1,5 +1,5 @@
 h1 {
-  color: #515050;
+  color: var(--dark-grey);
   font-family: "Caesar Dressing";
   font-size: 40px;
   font-weight: 400;
@@ -31,35 +31,35 @@ h1 {
   }
 }
 .page-categrie {
-  color: #515050;
+  color: var(--dark-grey);
   font-family: "Caesar Dressing";
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 16px;
 }
 .page-title {
-  color: #515050;
+  color: var(--dark-grey);
   font-family: "Caesar Dressing";
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 4px;
 }
 .page-god-type {
-  color: #515050;
+  color: var(--dark-grey);
   font-family: "Bubbler One";
   font-size: 20px;
   font-weight: 400;
   margin-bottom: 16px;
 }
 .page-first-text {
-  color: #515050;
+  color: var(--dark-grey);
   font-family: "Bubbler One";
   font-size: 20px;
   font-weight: 400;
   margin-bottom: 8px;
 }
 .page-seconde-text {
-  color: #515050;
+  color: var(--dark-grey);
   font-family: "Bubbler One";
   font-size: 20px;
   font-weight: 400;
@@ -72,7 +72,7 @@ h1 {
   align-self: stretch;
 }
 .page-card-link {
-  color: #515050;
+  color: var(--dark-grey);
   font-family: "Bubbler One";
   font-size: 20px;
   font-weight: 400;
