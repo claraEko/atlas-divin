@@ -17,12 +17,50 @@
   <body>
     <header>
       <a class="header-logo" href="">ATLAS DIVIN</a>
-      <img
+
+      <svg
         class="burger-menu"
         id="burger"
-        src="img/icon/icon/tabler-icons/align-justified.svg"
-        alt=""
-      />
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="25"
+        viewBox="0 0 24 25"
+        fill="none"
+      >
+        <g clip-path="url(#clip0_57_2369)">
+          <path
+            d="M4 6.5H20"
+            stroke="var( --dark-grey)"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4 12.5H20"
+            stroke="var( --dark-grey)"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4 18.5H16"
+            stroke=" var( --dark-grey)"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_57_2369">
+            <rect
+              width="24"
+              height="24"
+              fill="white"
+              transform="translate(0 0.5)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
       <nav class="header-nav">
         <ul class="header-nav-categories">
           <li class="header-nav-categorie">Mes favoris</li>
@@ -43,8 +81,11 @@
         <li id="header-nav-categorie">Dieu du jour</li>
         <li id="header-nav-categorie">Dieux populaires</li>
       </ul>
-      <button id="header-nav-light">
+      <button class="header-nav-light" id="dark-mode-btn-b">
         <img src="img/icon/tabler-icons/moon.svg" alt="" />
+      </button>
+      <button class="header-nav-dark" id="light-mode-btn-b">
+        <img src="img/icon/icon/tabler-icons/sun-high.svg" alt="" />
       </button>
     </nav>
     <main>
@@ -53,18 +94,18 @@
 
       <extends src="_pantheon-nav.html"></extends>
       <section class="cards">
-        <extends src="_card.html"></extends>
-        <extends src="_card.html"></extends>
-        <extends src="_card.html"></extends>
-        <extends src="_card.html"></extends>
-        <extends src="_card.html"></extends>
-        <extends src="_card.html"></extends>
-        <extends src="_card.html"></extends>
-        <extends src="_card.html"></extends>
-        <extends src="_card.html"></extends>
-        <extends src="_card.html"></extends>
-        <extends src="_card.html"></extends>
-        <extends src="_card.html"></extends>
+        <extends id="blue" src="_card-blue.html"></extends>
+        <extends id="red" src="_card-red.html"></extends>
+        <extends id="yellow" src="_card-yellow.html"></extends>
+        <extends id="green" src="_card-green.html"></extends>
+        <extends id="green" src="_card-green.html"></extends>
+        <extends id="red" src="_card-red.html"></extends>
+        <extends id="blue" src="_card-blue.html"></extends>
+        <extends id="yellow" src="_card-yellow.html"></extends>
+        <extends id="blue" src="_card-blue.html"></extends>
+        <extends id="red" src="_card-red.html"></extends>
+        <extends id="green" src="_card-green.html"></extends>
+        <extends id="yellow" src="_card-yellow.html"></extends>
       </section>
     </main>
     <footer class="footer">

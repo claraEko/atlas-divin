@@ -22,3 +22,14 @@ toggleDarkModeBtn.addEventListener("click", function () {
 toggleLightModeBtn.addEventListener("click", function () {
   document.querySelector("html").setAttribute("data-theme", "light");
 });
+
+const toggleDarkModeBtnb = document.querySelector("#dark-mode-btn-b");
+const toggleLightModeBtnb = document.querySelector("#light-mode-btn-b");
+
+toggleDarkModeBtnb.addEventListener("click", function () {
+  document.querySelector("html").setAttribute("data-theme", "dark");
+});
+
+toggleLightModeBtnb.addEventListener("click", function () {
+  document.querySelector("html").setAttribute("data-theme", "light");
+});

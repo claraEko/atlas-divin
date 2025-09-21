@@ -63,6 +63,12 @@ html[data-theme="light"] #light-mode-btn {
 html[data-theme="dark"] #dark-mode-btn {
   display: none;
 }
+html[data-theme="light"] #light-mode-btn-b {
+  display: none;
+}
+html[data-theme="dark"] #dark-mode-btn-b {
+  display: none;
+}
 body {
   background-color: var(--white);
 }

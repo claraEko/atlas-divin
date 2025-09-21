@@ -9,8 +9,56 @@
   width: calc((100% - 20px) / 2);
   background-color: var(--white);
 }
+.card-y {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  border-radius: 8px;
+  border: 2px solid var(--yellow);
+  width: calc((100% - 20px) / 2);
+  background-color: var(--white);
+}
+.card-r {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  border-radius: 8px;
+  border: 2px solid var(--red);
+  width: calc((100% - 20px) / 2);
+  background-color: var(--white);
+}
+.card-g {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  border-radius: 8px;
+  border: 2px solid var(--green);
+  width: calc((100% - 20px) / 2);
+  background-color: var(--white);
+}
 @media (min-width: 1024px) {
   .card {
+    width: calc((100% - 40px) / 3);
+  }
+}
+@media (min-width: 1024px) {
+  .card-y {
+    width: calc((100% - 40px) / 3);
+  }
+}
+@media (min-width: 1024px) {
+  .card-r {
+    width: calc((100% - 40px) / 3);
+  }
+}
+@media (min-width: 1024px) {
+  .card-g {
     width: calc((100% - 40px) / 3);
   }
 }
@@ -38,6 +86,39 @@
 }
 .card-title {
   color: var(--blue);
+  font-family: "Caesar Dressing";
+  font-size: 20px;
+  font-weight: 400;
+  padding: 8px 12px;
+  background-color: var(--white);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.card-title-y {
+  color: var(--yellow);
+  font-family: "Caesar Dressing";
+  font-size: 20px;
+  font-weight: 400;
+  padding: 8px 12px;
+  background-color: var(--white);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.card-title-r {
+  color: var(--red);
+  font-family: "Caesar Dressing";
+  font-size: 20px;
+  font-weight: 400;
+  padding: 8px 12px;
+  background-color: var(--white);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.card-title-g {
+  color: var(--green);
   font-family: "Caesar Dressing";
   font-size: 20px;
   font-weight: 400;
