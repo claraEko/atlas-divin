@@ -1,5 +1,7 @@
 var burger = document.querySelector("#burger");
 var menu = document.querySelector("#nav");
+var blueselector = document.querySelector("#blue-select");
+var card = document.querySelector("#green");
 var toggleMenu = function toggleMenu() {
   menu.classList.toggle("is-active");
 };
@@ -32,4 +34,43 @@ toggleDarkModeBtnb.addEventListener("click", function () {
 
 toggleLightModeBtnb.addEventListener("click", function () {
   document.querySelector("html").setAttribute("data-theme", "light");
+});
+var toggleBlue = function toggleBlue() {
+  card.classList.toggle("is-active-blue");
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = {
+    blue: document.querySelector("#blue-select"),
+    red: document.querySelector("#red-select"),
+    yellow: document.querySelector("#yellow-select"),
+    green: document.querySelector("#green-select"),
+  };
+
+  const allCards = document.querySelectorAll(
+    ".card-g, .card-r, .card-y, .card"
+  );
+
+  let activeFilter = null;
+
+  function toggleCards(colorClass) {
+    if (activeFilter === colorClass) {
+      allCards.forEach((card) => card.classList.remove("hidden"));
+      activeFilter = null;
+    } else {
+      allCards.forEach((card) => {
+        if (card.classList.contains(colorClass)) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+      activeFilter = colorClass;
+    }
+  }
+
+  buttons.blue.addEventListener("click", () => toggleCards("card"));
+  buttons.red.addEventListener("click", () => toggleCards("card-r"));
+  buttons.yellow.addEventListener("click", () => toggleCards("card-y"));
+  buttons.green.addEventListener("click", () => toggleCards("card-g"));
 });

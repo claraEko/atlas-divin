@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>_pantheon-nav</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="scss/main.scss" />
-  </head>
+
   <body>
-    <section>
+    <section >
       <article class="pantheon-nav">
         <h5 class="pantheon-nav-title">Panthéons populaires</h5>
         <ul class="pantheon-nav-buttons">
-          <li class="pantheon-nav-button">
-            <button class="pantheon-grec">
+          <li  class="pantheon-nav-button">
+            <button id="blue-select" class="pantheon-grec">
               <p>Panthéon Grec</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -24,21 +17,18 @@
                 <g clip-path="url(#clip0_105_894)">
                   <path
                     d="M5 12H19"
-                    stroke=" var(--white)"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                   <path
                     d="M15 16L19 12"
-                    stroke=" var(--white)"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                   <path
                     d="M15 8L19 12"
-                    stroke=" var(--white)"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -53,7 +43,8 @@
             </button>
           </li>
           <li class="pantheon-nav-button">
-            <button class="pantheon-egypt">
+            <button id="yellow-select" class="pantheon-egypt">
+
               <p>Panthéon égyptien</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +85,7 @@
             </button>
           </li>
           <li class="pantheon-nav-button">
-            <button class="pantheon-nord">
+            <button id="green-select" class="pantheon-nord">
               <p>Panthéon nordique</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +125,7 @@
               </svg>
           </li>
           <li class="pantheon-nav-button">
-            <button class="pantheon-romain">
+            <button id="red-select" class="pantheon-romain">
               <p>Panthéon romain</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -179,4 +170,3 @@
     </section>
     <script src="js/main.js" type="module"></script>
   </body>
-</html>

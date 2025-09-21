@@ -7,8 +7,10 @@
   .pantheon-nav {
     position: fixed;
     margin-left: 80px;
+    width: 305px;
   }
 }
+
 .pantheon-nav-title {
   color: var(--dark-grey);
   font-family: "Bubbler One";
@@ -22,6 +24,9 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
+}
+.pantheon-grec svg {
+  stroke: var(--white);
 }
 .pantheon-grec {
   display: flex;
@@ -37,6 +42,18 @@
   font-size: 20px;
   font-weight: 400;
   border: none;
+  transition-duration: 0.5s;
+}
+.pantheon-grec:hover {
+  background-color: var(--white);
+  border: 1px solid var(--blue);
+  color: var(--blue);
+}
+.pantheon-grec:hover svg {
+  stroke: var(--blue);
+}
+.pantheon-egypt svg {
+  stroke: var(--white);
 }
 .pantheon-egypt {
   display: flex;
@@ -52,6 +69,18 @@
   font-size: 20px;
   font-weight: 400;
   border: none;
+  transition-duration: 0.5s;
+}
+.pantheon-egypt:hover svg {
+  stroke: var(--yellow);
+}
+.pantheon-egypt:hover {
+  background-color: var(--white);
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
+}
+.pantheon-nord svg {
+  stroke: var(--white);
 }
 .pantheon-nord {
   display: flex;
@@ -68,6 +97,17 @@
   font-weight: 400;
   border: none;
 }
+.pantheon-nord:hover svg {
+  stroke: var(--green);
+}
+.pantheon-nord:hover {
+  background-color: var(--white);
+  border: 1px solid var(--green);
+  color: var(--green);
+}
+.pantheon-romain svg {
+  stroke: var(--white);
+}
 .pantheon-romain {
   display: flex;
   padding: 12px 8px;
@@ -82,6 +122,14 @@
   font-size: 20px;
   font-weight: 400;
   border: none;
+}
+.pantheon-romain:hover svg {
+  stroke: var(--red);
+}
+.pantheon-romain:hover {
+  background-color: var(--white);
+  border: 1px solid var(--red);
+  color: var(--red);
 }
 @media (max-width: 1025px) {
   .pantheon-egypt,
