@@ -76,52 +76,40 @@
 // });
 
 document.addEventListener("DOMContentLoaded", () => {
-  var burger = document.querySelector("#burger");
-  var menu = document.querySelector("#nav");
+  // --- Burger menu ---
+  const burger = document.querySelector("#burger");
+  const mobileMenu = document.querySelector("#nav");
 
-  if (burger && menu) {
+  if (burger && mobileMenu) {
     burger.addEventListener("click", () => {
-      menu.classList.toggle("is-active");
+      mobileMenu.classList.toggle("is-active");
     });
 
     window.addEventListener("resize", () => {
       if (window.innerWidth > 1024) {
-        menu.classList.remove("is-active");
+        mobileMenu.classList.remove("is-active");
       }
     });
   }
 
-  // Boutons mode sombre/clair
-  const toggleDarkModeBtn = document.querySelector("#dark-mode-btn");
-  const toggleLightModeBtn = document.querySelector("#light-mode-btn");
-  const toggleDarkModeBtnb = document.querySelector("#dark-mode-btn-b");
-  const toggleLightModeBtnb = document.querySelector("#light-mode-btn-b");
+  // --- Dark / Light mode ---
+  const themeButtons = [
+    { selector: "#dark-mode-btn", theme: "dark" },
+    { selector: "#light-mode-btn", theme: "light" },
+    { selector: "#dark-mode-btn-b", theme: "dark" },
+    { selector: "#light-mode-btn-b", theme: "light" },
+  ];
 
-  if (toggleDarkModeBtn) {
-    toggleDarkModeBtn.addEventListener("click", () => {
-      document.querySelector("html").setAttribute("data-theme", "dark");
-    });
-  }
+  themeButtons.forEach(({ selector, theme }) => {
+    const btn = document.querySelector(selector);
+    if (btn) {
+      btn.addEventListener("click", () => {
+        document.documentElement.setAttribute("data-theme", theme);
+      });
+    }
+  });
 
-  if (toggleLightModeBtn) {
-    toggleLightModeBtn.addEventListener("click", () => {
-      document.querySelector("html").setAttribute("data-theme", "light");
-    });
-  }
-
-  if (toggleDarkModeBtnb) {
-    toggleDarkModeBtnb.addEventListener("click", () => {
-      document.querySelector("html").setAttribute("data-theme", "dark");
-    });
-  }
-
-  if (toggleLightModeBtnb) {
-    toggleLightModeBtnb.addEventListener("click", () => {
-      document.querySelector("html").setAttribute("data-theme", "light");
-    });
-  }
-
-  // Filtre des cartes
+  // --- Filtrage des cartes ---
   const buttons = {
     blue: document.querySelector("#blue-select"),
     red: document.querySelector("#red-select"),
@@ -130,33 +118,30 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const allCards = document.querySelectorAll(
-    ".card-g, .card-r, .card-y, .card"
+    ".card, .card-g, .card-r, .card-y"
   );
-
   let activeFilter = null;
 
-  function toggleCards(colorClass) {
-    if (activeFilter === colorClass) {
-      allCards.forEach((card) => card.classList.remove("hidden"));
-      activeFilter = null;
-    } else {
-      allCards.forEach((card) => {
-        if (card.classList.contains(colorClass)) {
-          card.classList.remove("hidden");
-        } else {
-          card.classList.add("hidden");
-        }
-      });
-      activeFilter = colorClass;
-    }
-  }
+  const colorClassMap = {
+    blue: "card",
+    red: "card-r",
+    yellow: "card-y",
+    green: "card-g",
+  };
 
-  if (buttons.blue)
-    buttons.blue.addEventListener("click", () => toggleCards("card"));
-  if (buttons.red)
-    buttons.red.addEventListener("click", () => toggleCards("card-r"));
-  if (buttons.yellow)
-    buttons.yellow.addEventListener("click", () => toggleCards("card-y"));
-  if (buttons.green)
-    buttons.green.addEventListener("click", () => toggleCards("card-g"));
+  Object.entries(buttons).forEach(([color, btn]) => {
+    if (!btn) return;
+    btn.addEventListener("click", () => {
+      const colorClass = colorClassMap[color];
+      if (activeFilter === colorClass) {
+        allCards.forEach((card) => card.classList.remove("hidden"));
+        activeFilter = null;
+      } else {
+        allCards.forEach((card) => {
+          card.classList.toggle("hidden", !card.classList.contains(colorClass));
+        });
+        activeFilter = colorClass;
+      }
+    });
+  });
 });
