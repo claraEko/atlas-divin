@@ -1,115 +1,45 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//   var burger = document.querySelector("#burger");
-//   var menu = document.querySelector("#nav");
-//   var blueselector = document.querySelector("#blue-select");
-//   var card = document.querySelector("#green");
-//   var toggleMenu = function toggleMenu() {
-//     menu.classList.toggle("is-active");
-//   };
-
-//   burger.addEventListener("click", toggleMenu);
-
-//   window.addEventListener("resize", function () {
-//     if (window.innerWidth > 1024) {
-//       menu.classList.remove("is-active");
-//     }
-//   });
-
-//   const toggleDarkModeBtn = document.querySelector("#dark-mode-btn");
-//   const toggleLightModeBtn = document.querySelector("#light-mode-btn");
-
-//   toggleDarkModeBtn.addEventListener("click", function () {
-//     document.querySelector("html").setAttribute("data-theme", "dark");
-//   });
-
-//   toggleLightModeBtn.addEventListener("click", function () {
-//     document.querySelector("html").setAttribute("data-theme", "light");
-//   });
-
-//   const toggleDarkModeBtnb = document.querySelector("#dark-mode-btn-b");
-//   const toggleLightModeBtnb = document.querySelector("#light-mode-btn-b");
-
-//   toggleDarkModeBtnb.addEventListener("click", function () {
-//     document.querySelector("html").setAttribute("data-theme", "dark");
-//   });
-
-//   toggleLightModeBtnb.addEventListener("click", function () {
-//     document.querySelector("html").setAttribute("data-theme", "light");
-//   });
-//   var toggleBlue = function toggleBlue() {
-//     card.classList.toggle("is-active-blue");
-//   };
-
-//   const buttons = {
-//     blue: document.querySelector("#blue-select"),
-//     red: document.querySelector("#red-select"),
-//     yellow: document.querySelector("#yellow-select"),
-//     green: document.querySelector("#green-select"),
-//   };
-
-//   const allCards = document.querySelectorAll(
-//     ".card-g, .card-r, .card-y, .card"
-//   );
-
-//   let activeFilter = null;
-
-//   function toggleCards(colorClass) {
-//     if (activeFilter === colorClass) {
-//       allCards.forEach((card) => card.classList.remove("hidden"));
-//       activeFilter = null;
-//     } else {
-//       allCards.forEach((card) => {
-//         if (card.classList.contains(colorClass)) {
-//           card.classList.remove("hidden");
-//         } else {
-//           card.classList.add("hidden");
-//         }
-//       });
-//       activeFilter = colorClass;
-//     }
-//   }
-
-//   buttons.blue.addEventListener("click", () => toggleCards("card"));
-//   buttons.red.addEventListener("click", () => toggleCards("card-r"));
-//   buttons.yellow.addEventListener("click", () => toggleCards("card-y"));
-//   buttons.green.addEventListener("click", () => toggleCards("card-g"));
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Burger menu ---
-  const burger = document.querySelector("#burger");
-  const mobileMenu = document.querySelector("#nav");
+  var burger = document.querySelector("#burger");
+  var menu = document.querySelector("#nav");
+  var blueselector = document.querySelector("#blue-select");
+  var card = document.querySelector("#green");
+  var toggleMenu = function toggleMenu() {
+    menu.classList.toggle("is-active");
+  };
 
-  if (burger && mobileMenu) {
-    burger.addEventListener("click", () => {
-      mobileMenu.classList.toggle("is-active");
-    });
+  burger.addEventListener("click", toggleMenu);
 
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 1024) {
-        mobileMenu.classList.remove("is-active");
-      }
-    });
-  }
-
-  // --- Dark / Light mode ---
-  const themeButtons = [
-    { selector: "#dark-mode-btn", theme: "dark" },
-    { selector: "#light-mode-btn", theme: "light" },
-    { selector: "#dark-mode-btn-b", theme: "dark" },
-    { selector: "#light-mode-btn-b", theme: "light" },
-  ];
-
-  themeButtons.forEach(({ selector, theme }) => {
-    const btn = document.querySelector(selector);
-    if (btn) {
-      btn.addEventListener("click", () => {
-        document.documentElement.setAttribute("data-theme", theme);
-      });
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 1024) {
+      menu.classList.remove("is-active");
     }
   });
 
-  // --- Filtrage des cartes ---
+  const toggleDarkModeBtn = document.querySelector("#dark-mode-btn");
+  const toggleLightModeBtn = document.querySelector("#light-mode-btn");
+
+  toggleDarkModeBtn.addEventListener("click", function () {
+    document.querySelector("html").setAttribute("data-theme", "dark");
+  });
+
+  toggleLightModeBtn.addEventListener("click", function () {
+    document.querySelector("html").setAttribute("data-theme", "light");
+  });
+
+  const toggleDarkModeBtnb = document.querySelector("#dark-mode-btn-b");
+  const toggleLightModeBtnb = document.querySelector("#light-mode-btn-b");
+
+  toggleDarkModeBtnb.addEventListener("click", function () {
+    document.querySelector("html").setAttribute("data-theme", "dark");
+  });
+
+  toggleLightModeBtnb.addEventListener("click", function () {
+    document.querySelector("html").setAttribute("data-theme", "light");
+  });
+  var toggleBlue = function toggleBlue() {
+    card.classList.toggle("is-active-blue");
+  };
+
   const buttons = {
     blue: document.querySelector("#blue-select"),
     red: document.querySelector("#red-select"),
@@ -118,30 +48,29 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const allCards = document.querySelectorAll(
-    ".card, .card-g, .card-r, .card-y"
+    ".card-g, .card-r, .card-y, .card"
   );
+
   let activeFilter = null;
 
-  const colorClassMap = {
-    blue: "card",
-    red: "card-r",
-    yellow: "card-y",
-    green: "card-g",
-  };
+  function toggleCards(colorClass) {
+    if (activeFilter === colorClass) {
+      allCards.forEach((card) => card.classList.remove("hidden"));
+      activeFilter = null;
+    } else {
+      allCards.forEach((card) => {
+        if (card.classList.contains(colorClass)) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+      activeFilter = colorClass;
+    }
+  }
 
-  Object.entries(buttons).forEach(([color, btn]) => {
-    if (!btn) return;
-    btn.addEventListener("click", () => {
-      const colorClass = colorClassMap[color];
-      if (activeFilter === colorClass) {
-        allCards.forEach((card) => card.classList.remove("hidden"));
-        activeFilter = null;
-      } else {
-        allCards.forEach((card) => {
-          card.classList.toggle("hidden", !card.classList.contains(colorClass));
-        });
-        activeFilter = colorClass;
-      }
-    });
-  });
+  buttons.blue.addEventListener("click", () => toggleCards("card"));
+  buttons.red.addEventListener("click", () => toggleCards("card-r"));
+  buttons.yellow.addEventListener("click", () => toggleCards("card-y"));
+  buttons.green.addEventListener("click", () => toggleCards("card-g"));
 });
