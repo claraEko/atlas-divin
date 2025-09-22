@@ -1,6 +1,6 @@
 <article id="yellow" class="card-y">
   <div class="card-top">
-    <img class="card-img" src="img/Dieux-et-déesses/athena.png" alt="" />
+    <img class="card-img" src="{{ img }}" alt="" />
 
     <svg
       class="card-save"
@@ -18,12 +18,12 @@
       />
     </svg>
 
-    <div class="card-title-y">titre</div>
+    <div class="card-title-y">{{ title }}</div>
   </div>
 
   <article class="card-text">
     <div class="Panthéon">
-      <p class="card-type">PanthonType</p>
+      <p class="card-type">{{ PanthonType }}</p>
 
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -43,6 +43,6 @@
         />
       </svg>
     </div>
-    <p class="card-god-type">GodType</p>
+    <p class="card-god-type">{{ GodType }}</p>
   </article>
 </article>
