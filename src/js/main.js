@@ -75,4 +75,4 @@ document.addEventListener("DOMContentLoaded", () => {
   buttons.green.addEventListener("click", () => toggleCards("card-g"));
 });
 
-// le js ne marche pas en ligne je n'ai pas trouvee la reson, poutant il marche tres bien en local
+// le js ne marche pas en ligne je n'ai pas trouvé la raison, poutant il marche tres bien en local
